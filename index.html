@@ -1,6 +1,36 @@
-frostbite-first-aid-bot/
-├── index.html          # Главная страница с интерфейсом бота
-├── style.css           # Стили оформления
-├── script.js           # Логика чат-бота
-├── medical-data.json   # База знаний по обморожениям (вопросы-ответы)
-└── README.md
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Первая помощь при обморожении – Чат-бот</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <div class="header-icon">❄️ </div>
+            <h1>Первая помощь при обморожении</h1>
+            <p class="disclaimer">Информационный бот. При серьёзных симптомах вызывайте 112</p>
+        </header>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <p>👋  Здравствуйте! Я помогу разобраться, что делать при обморожении.</p>
+                <p><strong>Опишите симптомы</strong> или выберите один из вариантов:</p>
+            </div>
+        </div>
+        
+        <div class="quick-actions" id="quickActions">
+            <!-- Кнопки будут добавляться динамически -->
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Опишите ситуацию или симптомы...">
+            <button id="sendButton">Отправить</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
